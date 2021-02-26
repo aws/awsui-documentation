@@ -17,6 +17,10 @@ Steps to reproduce the behavior:
 3. Scroll down to '....'
 4. See error
 
+**Reproduction link**
+A runnable demo where the bug can be easily reproduced,
+for example via https://codesandbox.io/s/awsui-react-uxpwg.
+
 **Expected behavior**
 A clear and concise description of what you expected to happen.
 
