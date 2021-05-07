@@ -40,10 +40,9 @@ Required: No
 ### modalRoot
 
 > Specifies the HTML element where the modal is rendered.
+> If a modal root isn't provided, the modal will render to an element under `document.body`.
 
 Type: HTMLElement
-
-Default: `document.body`
 
 Required: No
 

@@ -188,6 +188,17 @@ Type: String
 Required: Yes
 
 
+### openCalendarAriaLabel
+
+> Specifies a function that generates the `aria-label` for the 'open calendar' button. The `selectedDate` parameter is
+> a human-readable localised string representing the current value of the input.
+> (for example, ``selectedDate => 'Choose Date' + (selectedDate ? `, selected date is ${selectedDate}` : '')``)
+
+Type:  (selectedDate: null | string) => string
+
+Required: No
+
+
 ### placeholder
 
 > Specifies the placeholder text rendered when the value is an empty string.

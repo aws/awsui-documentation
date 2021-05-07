@@ -1,6 +1,6 @@
 # Select
 
-A select is a form element that lets a user choose a single item from a list of items.
+A form element that lets a user choose a single item from a list of items.
 
 
 
@@ -211,7 +211,7 @@ Required: No
 > on your own.
 > 
 
-Type: applyDisplayName.applyDisplayName.T
+Type: SelectProps.Options
 
 Default: `[]`
 

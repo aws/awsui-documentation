@@ -39,7 +39,7 @@ Required: No
 > We do not recommend enabling this property if you don't have this requirement. There is a known issue with
 > the '[aria-owns](https://a11ysupport.io/tech/aria/aria-owns_attribute)' attribute in Safari with VoiceOver that
 > prevents VO specific controls (CTRL+OPT+Left/Right) from entering a dropdown on Safari due to its position in the DOM.
-> The fixed positioning also results in a small visible lag when scrolling on complex pages, please use discretionarily.
+> Fixed positioning also results in slight visible lag when scrolling complex pages. Use with discretion.
 
 Type: Boolean
 

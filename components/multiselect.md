@@ -249,7 +249,7 @@ Required: No
 > on your own.
 > 
 
-Type: applyDisplayName.applyDisplayName.T
+Type: SelectProps.Options
 
 Required: No
 

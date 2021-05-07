@@ -79,7 +79,7 @@ Required: No
 >      The anchor also has the attributes `target="_blank"` and `rel="noopener"`.
 >      Additionally, the `activeHref` property won't be modified when a user chooses the link.
 > - `info` (ReactNode) - Enables you to display content next to the link. Although it is technically possible to insert any content,
->     our UX guidelines allow only to add a Badge.
+>     our UX guidelines allow only to add a Badge and/or a "New" label.
 > 
 > #### Divider
 > Object that represents a horizontal divider between navigation content.

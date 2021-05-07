@@ -46,6 +46,8 @@ Required: No
 
 Type: String
 
+Default: `'submit'`
+
 Valid values: `submit | none`
 
 Required: No
@@ -144,12 +146,13 @@ Required: No
 > * `normal` for secondary buttons.
 > * `link` for tertiary buttons.
 > * `icon` to display an icon only (no text).
+> * `inline-icon` to display an icon-only (no text) button within a text context.
 
 Type: String
 
 Default: `'normal'`
 
-Valid values: `normal | primary | link | icon`
+Valid values: `normal | primary | link | icon | inline-icon`
 
 Required: No
 

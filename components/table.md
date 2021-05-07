@@ -36,7 +36,7 @@ Presents data in a two-dimensional table format, arranged in columns and rows in
 Type: 
 ```
 TableProps.AriaLabels {
-  allItemsSelectionLabel: (
+  allItemsSelectionLabel?: (
     data: TableProps.SelectionState<T>
   ) => string
   itemSelectionLabel: (

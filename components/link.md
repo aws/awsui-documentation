@@ -104,7 +104,7 @@ Required: No
 
 > Specifies where to open the linked URL. Set this to `_blank` to open the URL
 > in a new tab. If you set this property to `_blank`, the component
-> automatically adds `rel="noopener"` to avoid performance
+> automatically adds `rel="noopener noreferrer"` to avoid performance
 > and security issues.
 > For other options see the documentation for <a> tag's
 > [target attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target).
