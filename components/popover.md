@@ -86,6 +86,25 @@ Valid values: `top | right | bottom | left`
 Required: No
 
 
+### renderWithPortal
+
+> By default, the popover is constrained to fit inside its parent
+> [stacking context](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
+> Enabling this property will allow the popover to be rendered in the root stack context using
+> [React Portals](https://reactjs.org/docs/portals.html).
+> Enable this setting if you need the popover to ignore its parent stacking context, such as in side navigation.
+> Note: Using popover rendered with portal within a Modal is not supported.
+> 
+
+Type: Boolean
+
+Default: `false`
+
+Valid values: `true | false`
+
+Required: No
+
+
 ### size
 
 > Determines the maximum width for the popover.

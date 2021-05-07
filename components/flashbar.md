@@ -42,9 +42,10 @@ Required: No
 > our UX guidelines only allow you to add a button.
 > * `buttonText` (string) - Specifies that an action button should be displayed, with the specified text.
 > When a user clicks on this button the `onButtonClick` handler is called. If the `action` property is set, this property is ignored.
+> **Deprecated**, replaced by `action`.
 > * `onDismiss` (event => void) - Called when a user clicks on the close icon that is displayed when the `dismissible` property is set to `true`.
 > * `onButtonClick` (event => void) - Called when a user clicks on the action button. This is not called if you create a custom button
->   using the `action` property.
+>   using the `action` property. **Deprecated**, replaced by `action`.
 > 
 
 Type: ReadonlyArray<FlashbarProps.MessageDefinition>

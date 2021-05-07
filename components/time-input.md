@@ -67,7 +67,7 @@ Required: No
 
 > Specifies whether to enable a browser's autocomplete functionality for this input.
 > In some cases it might be appropriate to disable autocomplete (for
-> example, for security-sensitive fields).
+> example, for security-sensitive fields). To use it correctly, set the `name` property.
 
 Type: Boolean
 

@@ -1,6 +1,6 @@
 # Collection preferences (CollectionPreferences)
 
-Used within a collection, resource preferences allows for managing display preferences.
+Enables the user to manage display preferences within a collection.
 
 
 

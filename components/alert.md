@@ -82,10 +82,19 @@ Required: No
 
 
 
+### action
+
+> Specifies an action for the alert message.
+> Although it is technically possible to insert any content, our UX guidelines only allow you to add a button.
+
+
+
+
 ### buttonText
 
 > Displays an action button next to the message area when set.
 > An `onButtonClick` event is fired when the user clicks it.
+> **Deprecated**, replaced by `action`.
 
 
 
@@ -114,6 +123,7 @@ Required: No
 ### onButtonClick
 
 > Fired when the user clicks the action button.
+> **Deprecated**, replaced by `action`.
 
 Cancelable: No
 

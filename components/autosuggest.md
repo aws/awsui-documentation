@@ -243,7 +243,7 @@ Required: No
 > on your own.
 > 
 
-Type: applyDisplayName.applyDisplayName.T
+Type: AutosuggestProps.Options
 
 Required: No
 
