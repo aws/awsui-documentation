@@ -2,17 +2,17 @@
 import Form from "@awsui/components-react/form";
 import FormField from "@awsui/components-react/form-field";
 import Input from "@awsui/components-react/input";
-import Select from "@awsui/components-react/select";
+import Select, { SelectProps } from "@awsui/components-react/select";
 import Container from "@awsui/components-react/container";
 import Header from "@awsui/components-react/header";
 import SpaceBetween from "@awsui/components-react/space-between";
 import Button from "@awsui/components-react/button";
 import AppLayout from "@awsui/components-react/app-layout";
-import { useState } from "react";
+import React, { useState } from "react";
 
 function App() {
-  const [inputValue, setInputValue] = useState();
-  const [selectValue, setSelectValue] = useState();
+  const [inputValue, setInputValue] = useState("");
+  const [selectValue, setSelectValue] = useState<SelectProps.Option | null>(null);
   return (
     <AppLayout
       content={
