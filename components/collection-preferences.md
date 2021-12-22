@@ -57,7 +57,7 @@ Required: Yes
 > - If no built-in preference is displayed, the custom content occupies the whole modal.
 > 
 
-Type: (customValue: CustomPreferenceType, setCustomValue: React.Dispatch<React.SetStateAction<CustomPreferenceType>>) => React.ReactNode
+Type: (customValue: CustomPreferenceType, setCustomValue: React.Dispatch<CustomPreferenceType>) => React.ReactNode
 
 Required: No
 

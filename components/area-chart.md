@@ -1,6 +1,6 @@
-# Bar chart (BarChart)
+# Area chart (AreaChart)
 
-Visualizes one or many series of data, with an emphasis on the total amount of each data point.
+An area chart visualizes two or more series of data. Through stacked data series, it emphasizes the part-to-whole relationship of data over a period of time.
 
 
 
@@ -57,20 +57,6 @@ Type: String
 Default: `"medium"`
 
 Valid values: `small | medium | large`
-
-Required: No
-
-
-### emphasizeBaselineAxis
-
-> When set to `true`, adds a visual emphasis on the zero baseline axis.
-> See the usage guidelines for more details.
-
-Type: Boolean
-
-Default: `true`
-
-Valid values: `true | false`
 
 Required: No
 
@@ -132,21 +118,7 @@ Required: No
 > - If you explicitly set this property, you must set an `onHighlightChange` listener to update this property when a series should be highlighted (controlled behavior).
 > 
 
-Type: MixedLineBarChartProps.ChartSeries<T> | null
-
-Required: No
-
-
-### horizontalBars
-
-> When set to `true`, the x and y axes are flipped, which causes any bars to be rendered horizontally instead of vertically.
-> This can only be used when the chart consists exclusively of bar series.
-
-Type: Boolean
-
-Default: `false`
-
-Valid values: `true | false`
+Type: AreaChartProps.Series<T> | null
 
 Required: No
 
@@ -157,17 +129,19 @@ Required: No
 
 Type: 
 ```
-CartesianChartProps.I18nStrings {
+AreaChartProps.I18nStrings {
   chartAriaRoleDescription?: string
   detailPopoverDismissAriaLabel?: string
+  detailTotalFormatter?: AreaChartProps.TickFormatter<number>
+  detailTotalLabel?: string
   filterLabel?: string
   filterPlaceholder?: string
   filterSelectedAriaLabel?: string
   legendAriaLabel?: string
   xAxisAriaRoleDescription?: string
-  xTickFormatter?: CartesianChartProps.TickFormatter<T>
+  xTickFormatter?: AreaChartProps.TickFormatter<T>
   yAxisAriaRoleDescription?: string
-  yTickFormatter?: CartesianChartProps.TickFormatter<number>
+  yTickFormatter?: AreaChartProps.TickFormatter<number>
 }
 ```
 
@@ -214,32 +188,17 @@ Required: No
 ### series
 
 > Array that represents the source of data for the displayed chart.
-> Each element can represent a bar series or a threshold, and can have the following properties:
+> Each element can represent an area series, or a threshold, and can have the following properties:
 > * `title` (string): A human-readable title for this series
-> * `type` (string): Series type (`"bar"`, or `"threshold"`)
-> * `data` (Array): An array of data points, represented as objects with `x` and `y` properties
+> * `type` (string): Series type (`"area"`, or `"threshold"`)
+> * `data` (Array): An array of data points, represented as objects with `x` and `y` properties. The `x` values must be consistent across all series
 > * `color` (string): (Optional) A color hex value for this series. When assigned, it takes priority over the automatically assigned color
 > * `valueFormatter` (Function): (Optional) A function that formats data values before rendering in the UI, For example, in the details popover.
 > 
 
-Type: ReadonlyArray<BarSeries<T>>
-
-Default: `[]`
+Type: ReadonlyArray<AreaChartProps.Series<T>>
 
 Required: Yes
-
-
-### stackedBars
-
-> When set to `true`, bars in the same data point are stacked instead of grouped next to each other.
-
-Type: Boolean
-
-Default: `false`
-
-Valid values: `true | false`
-
-Required: No
 
 
 ### statusType
@@ -264,7 +223,7 @@ Required: No
 > - If you do not set this property, series are shown and hidden automatically when using the default filter component (uncontrolled behavior).
 > - If you explicitly set this property, you must set an `onFilterChange` listener to update this property when the visible series should change, or when one of your custom filters changes the number of visible series (controlled behavior).
 
-Type: ReadonlyArray<MixedLineBarChartProps.ChartSeries<T>>
+Type: ReadonlyArray<AreaChartProps.Series<T>>
 
 Required: No
 

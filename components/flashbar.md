@@ -1,6 +1,6 @@
 # Flashbar
 
-Displays one or more page-level flash notifications to communicate that status of a user’s action, such as success, failed, and so on.
+Displays one or more page-level flash notifications to communicate the status of a user’s action, such as success, failed, and so on.
 
 
 

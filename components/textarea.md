@@ -134,6 +134,23 @@ Valid values: `true | false`
 Required: No
 
 
+### disableBrowserSpellcheck
+
+> Specifies whether to disable browser spellcheck feature.
+> If you set this to `true`, it disables native browser capability
+> that checks for spelling/grammar errors.
+> If you don't set it, the behavior follows the default behavior
+> of the user's browser.
+
+Type: Boolean
+
+Default: `false`
+
+Valid values: `true | false`
+
+Required: No
+
+
 ### disabled
 
 > Specifies if the control is disabled, which prevents the

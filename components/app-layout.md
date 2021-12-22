@@ -1,6 +1,6 @@
 # App layout (AppLayout)
 
-Provides the basic layout for all types of pages, including collapsible side navigation and tools panel.
+Provides the basic layout for all types of pages, including collapsible side navigation, tools panel and split panel.
 
 
 
@@ -25,10 +25,10 @@ Provides the basic layout for all types of pages, including collapsible side nav
 >   navigation: "Navigation drawer",
 >   navigationClose: "Close navigation drawer",
 >   navigationToggle: "Open navigation drawer",
->   notification: "Notifications",
+>   notifications: "Notifications",
 >   tools: "Help panel",
 >   toolsClose: "Close help panel",
->   toolsTogge: "Open help panel"
+>   toolsToggle: "Open help panel"
 > }
 > ```
 > 
@@ -87,6 +87,19 @@ Required: No
 ### disableBodyScroll
 
 > Activates a backwards-compatibility mode for applications with non-fixed headers and footers.
+
+Type: Boolean
+
+Default: `false`
+
+Valid values: `true | false`
+
+Required: No
+
+
+### disableContentHeaderOverlap
+
+> Disables overlap between `contentHeader` and `content` slots.
 
 Type: Boolean
 
@@ -196,6 +209,45 @@ Default: `280`
 Required: No
 
 
+### splitPanelOpen
+
+> State of the split panel.
+
+Type: Boolean
+
+Default: `false`
+
+Valid values: `true | false`
+
+Required: No
+
+
+### splitPanelPreferences
+
+> Controls the split panel preferences.
+> By default, the preference is `{ position: 'bottom' }`
+> 
+
+Type: 
+```
+AppLayoutProps.SplitPanelPreferences {
+  position: "bottom" | "side"
+}
+```
+
+
+Required: No
+
+
+### splitPanelSize
+
+> The size of the split panel in pixels.
+
+Type: Number
+
+Required: No
+
+
 ### stickyNotifications
 
 > If true, the notification slot is rendered above the scrollable
@@ -271,6 +323,13 @@ Required: No
 
 
 
+### contentHeader
+
+> Top area of the page content.
+
+
+
+
 ### navigation
 
 > Navigation drawer.
@@ -283,6 +342,13 @@ Required: No
 > Displayed on top of the main content in the scrollable area,
 > it occupies the full width and is not affected by the padding that is added to the content slot.
 > Conceived to contain notifications (flash messages).
+
+
+
+
+### splitPanel
+
+> Split panel.
 
 
 
@@ -304,6 +370,51 @@ Required: No
 ### onNavigationChange
 
 > Fired when the navigation drawer is toggled.
+
+Detail type: 
+```
+AppLayoutProps.ChangeDetail {
+  open: boolean
+}
+```
+
+Cancelable: No
+
+
+
+### onSplitPanelPreferencesChange
+
+> Fired when the split panel preferences change.
+
+Detail type: 
+```
+AppLayoutProps.SplitPanelPreferences {
+  position: "bottom" | "side"
+}
+```
+
+Cancelable: No
+
+
+
+### onSplitPanelResize
+
+> Fired when the split panel is resized.
+
+Detail type: 
+```
+AppLayoutProps.SplitPanelResizeDetail {
+  size: number
+}
+```
+
+Cancelable: No
+
+
+
+### onSplitPanelToggle
+
+> Fired when the split panel is toggled.
 
 Detail type: 
 ```

@@ -106,7 +106,8 @@ Required: No
 > {
 >   wrapLines: true,
 >   theme: 'dawn'
-> }```
+> }
+> ```
 > 
 > You can use any theme provided by Ace.
 > 
@@ -136,8 +137,26 @@ Required: Yes
 
 ### onChange
 
-> Called when the value changes.
+> An event handler called when the value changes.
 > The event `detail` contains the current value of the code editor content.
+> **Deprecated**, replaced by `onDelayedChange`.
+
+Detail type: 
+```
+CodeEditorProps.ChangeDetail {
+  value: string
+}
+```
+
+Cancelable: No
+
+
+
+### onDelayedChange
+
+> An event handler called when the value changes.
+> The event `detail` contains the current value of the code editor content.
+> A user interaction can cause multiple change events to be emitted by the Ace editor. They are batched together into a single `onDelayedChange` event to avoid bugs when controlling the `value` field.
 
 Detail type: 
 ```

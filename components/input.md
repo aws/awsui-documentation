@@ -159,6 +159,19 @@ Type: String
 Required: No
 
 
+### inputMode
+
+> Adds a hint to the browser about the type of data a user may enter into this field.
+> Some devices may render a different virtual keyboard depending on this value.
+> This value may not be supported by all browsers or devices.
+
+Type: String
+
+Valid values: `none | text | decimal | numeric | tel | search | email | url`
+
+Required: No
+
+
 ### invalid
 
 > Overrides the invalidation state. Usually the invalid state
@@ -207,6 +220,19 @@ Type: Boolean
 Default: `false`
 
 Valid values: `true | false`
+
+Required: No
+
+
+### step
+
+> The step attribute is a number that specifies the granularity that the value
+> must adhere to or the keyword "any". It is valid for the numeric input types,
+> including the date, month, week, time, datetime-local, number and range types.
+
+Type: InputProps.Step
+
+Valid values: `number | any`
 
 Required: No
 
@@ -340,6 +366,12 @@ Cancelable: Yes
 ### focus
 
 > Sets input focus onto the UI control.
+
+
+
+### select
+
+> Selects all text in the input control.
 
 
 

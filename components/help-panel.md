@@ -1,6 +1,6 @@
 # Help panel (HelpPanel)
 
-A container that appears on the right side of the App Layout. The panel displays help content that relates to a concept, term, setting, option, or task within the main page content.
+The panel displays help content that relates to a concept, term, setting, option, or task within the main page content.
 
 
 

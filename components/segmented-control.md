@@ -1,6 +1,6 @@
 # Segmented control (SegmentedControl)
 
-Enables users to toggle between different ways a piece of content or data are formatted on the page.
+With a segmented control, users can toggle between different ways of formatting a piece of content or data.
 
 
 
@@ -55,6 +55,7 @@ Required: No
 > - `iconAlt` (string) - (Optional) Specifies alternate text for the icon when using `iconUrl`, or `iconName` without `text`.
 >            This is required when you use an icon without `text`.
 > - `iconUrl` (string) - (Optional) Specifies the URL of a custom icon.
+> - `iconSvg` (ReactNode) - (Optional) Custom SVG icon. Equivalent to the `svg` slot of the [icon component](icon.md).
 > - `text` (string) - (Optional) Specifies the text of the segment.
 > 
 

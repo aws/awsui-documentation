@@ -83,7 +83,13 @@ Required: No
 
 > Specifies an `aria-label` for the token deselection button.
 
-Type:  (option: OptionDefinition) => string
+Type: 
+```
+ (
+  option: MultiselectProps.Option
+) => string
+```
+
 
 Required: No
 
@@ -106,6 +112,24 @@ Required: No
 > Specifies the text to display when a data fetching error occurs. Make sure that you provide `recoveryText`.
 
 Type: String
+
+Required: No
+
+
+### expandToViewport
+
+> By default, the dropdown height is constrained to fit inside the height of its parent element.
+> Enabling this property will allow the dropdown to extend beyond its parent, using fixed positioning and
+> [React Portals](https://reactjs.org/docs/portals.html). Enable this setting if you need the dropdown
+> to ignore overflow: hidden or scroll parents, such as in a split view layout.
+> We do not recommend enabling this property if you don't have this requirement. Fixed positioning results
+> in slight visible lag when scrolling complex pages. Use with discretion.
+
+Type: Boolean
+
+Default: `false`
+
+Valid values: `true | false`
 
 Required: No
 
@@ -157,6 +181,20 @@ Required: No
 > Specifies the text to display at the bottom of the dropdown menu after pagination has reached the end.
 
 Type: String
+
+Required: No
+
+
+### hideTokens
+
+> Hides the tokens displayed underneath the component.
+> Only use this if the selected options are displayed elsewhere on the page.
+
+Type: Boolean
+
+Default: `false`
+
+Valid values: `true | false`
 
 Required: No
 
@@ -239,7 +277,7 @@ Required: No
 ### options
 
 > Specifies an array of options that are displayed to the user as a dropdown list.
-> The options can be grouped using `OptionsGroup` objects.
+> The options can be grouped using `OptionGroup` objects.
 > Note: Only one level of option nesting is supported.
 > 
 > If you want to use the built-in filtering capabilities of this component, provide
@@ -461,6 +499,7 @@ Cancelable: No
 
 ### focus
 
+> Sets focus on the element without opening the dropdown or showing a visual focus indicator.
 
 
 

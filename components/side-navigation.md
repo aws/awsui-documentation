@@ -37,13 +37,15 @@ Required: No
 > It contains the following:
 > - `text` (string) - Specifies the header text.
 > - `href` (string) - Specifies the `href` that the header links to.
+> - `logo` (object) - Specifies a logo image.
 > 
 
 Type: 
 ```
 SideNavigationProps.Header {
   href: string
-  text: string
+  logo?: SideNavigationProps.Logo
+  text?: string
 }
 ```
 
@@ -182,7 +184,7 @@ SideNavigationProps.FollowDetail {
   href: string
   info?: React.ReactNode
   target?: string
-  text: string
+  text?: string
   type?:
     | "expandable-link-group"
     | "link"

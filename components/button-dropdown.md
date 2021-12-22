@@ -8,6 +8,16 @@ Enables you to group a set of actions under one button.
 
 
 
+### ariaLabel
+
+> Adds `aria-label` to the button dropdown trigger.
+> It should be used in buttons that don't have text in order to make them accessible.
+
+Type: String
+
+Required: No
+
+
 ### className
 
 > Adds the specified classes to the root element of the component.
@@ -33,7 +43,7 @@ Required: No
 ### expandToViewport
 
 > By default, the dropdown height is constrained to fit inside the height of its parent element.
-> Enabling this property will allow the dropdown to extend beyond its parent, using fixed postioning and
+> Enabling this property will allow the dropdown to extend beyond its parent, using fixed positioning and
 > [React Portals](https://reactjs.org/docs/portals.html). Enable this setting if you need the dropdown
 > to ignore overflow: hidden or scroll parents, such as in a split view layout.
 > We do not recommend enabling this property if you don't have this requirement. There is a known issue with
@@ -75,19 +85,34 @@ Required: No
 ### items
 
 > Array of objects, each having the following properties:
-> * `id` [string]: allows to identify the item that the user clicked on. Mandatory for individual items, optional for categories.
+> - `id` (string) - allows to identify the item that the user clicked on. Mandatory for individual items, optional for categories.
 > 
-> * `text` [string]: description shown in the menu for this item. Mandatory for individual items, optional for categories.
+> - `text` (string) - description shown in the menu for this item. Mandatory for individual items, optional for categories.
 > 
-> * `disabled` [boolean]: whether the item is disabled. Disabled items are not clickable.
+> - `disabled` (boolean) - whether the item is disabled. Disabled items are not clickable.
 > 
-> * `items` [ReadonlyArray<Item>]: an array of item objects. Items will be rendered as nested menu items but only for the first nesting level, multi-nesting is not supported.
+> - `items` (ReadonlyArray<Item>): an array of item objects. Items will be rendered as nested menu items but only for the first nesting level, multi-nesting is not supported.
 > An item which belongs to nested group has the following properties: `id`, `text`, `disabled` and `description`.
 > 
-> * `description` [string]: additional data that will be passed to a `data-description` attribute.
+> - `description` (string) - additional data that will be passed to a `data-description` attribute.
+> 
+> - `href` (string) - (Optional) Defines the target URL of the menu item, turning it into a link.
+> 
+> - `external` (boolean) - Marks a menu item as external by adding an icon after the menu item text. The link will open in a new tab when clicked. Note that this only works when `href` is also provided.
+> 
+> - `externalIconAriaLabel` (string) - Adds an `aria-label` to the external icon.
+> 
+> - `iconName` (string) - (Optional) Specifies the name of the icon, used with the [icon component](icon.md).
+> 
+> - `iconAlt` (string) - (Optional) Specifies alternate text for the icon when using `iconUrl`.
+> 
+> - `iconUrl` (string) - (Optional) Specifies the URL of a custom icon.
+> 
+> - `iconSvg` (ReactNode) - (Optional) Custom SVG icon. Equivalent to the `svg` slot of the [icon component](icon.md).
+> 
 > 
 
-Type: ReadonlyArray<InternalButtonDropdownProps.Item | InternalButtonDropdownProps.ItemGroup>
+Type: ReadonlyArray<ButtonDropdownProps.ItemOrGroup>
 
 Required: Yes
 
@@ -108,15 +133,16 @@ Required: No
 
 ### variant
 
-> Determines the general styling of the button dropdown. Use
-> * `primary` for primary buttons,
+> Determines the general styling of the button dropdown.
+> * `primary` for primary buttons
 > * `normal` for secondary buttons
+> * `icon` for icon buttons
 
 Type: String
 
 Default: `'normal'`
 
-Valid values: `normal | primary`
+Valid values: `normal | primary | icon`
 
 Required: No
 
@@ -148,12 +174,34 @@ Required: No
 
 Detail type: 
 ```
-InternalButtonDropdownProps.ItemClickDetails {
+ButtonDropdownProps.ItemClickDetails {
+  external?: false | true
+  href?: string
   id: string
+  target?: string
 }
 ```
 
-Cancelable: No
+Cancelable: Yes
+
+
+
+### onItemFollow
+
+> Called when the user clicks on an item with the left mouse button without pressing
+> modifier keys (that is, CTRL, ALT, SHIFT, META), and the item has an `href` set.
+
+Detail type: 
+```
+ButtonDropdownProps.ItemClickDetails {
+  external?: false | true
+  href?: string
+  id: string
+  target?: string
+}
+```
+
+Cancelable: Yes
 
 
 

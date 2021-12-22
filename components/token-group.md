@@ -30,6 +30,22 @@ Type: String
 Required: No
 
 
+### i18nStrings
+
+> An object containing all the necessary localized strings required by the component.
+
+Type: 
+```
+TokenGroupProps.I18nStrings {
+  limitShowFewer?: string
+  limitShowMore?: string
+}
+```
+
+
+Required: No
+
+
 ### id
 
 > Adds the specified ID to the root element of the component.
@@ -51,9 +67,19 @@ Required: No
 > - `iconName` (string) - (Optional) Specifies the name of an [icon](icon.md) to display in the token.
 > - `iconAlt` (string) - (Optional) Specifies alternate text for a custom icon, for use with `iconUrl`.
 > - `iconUrl` (string) - (Optional) URL of a custom icon.
+> - `iconSvg` (ReactNode) - (Optional) Custom SVG icon. Equivalent to the `svg` slot of the [icon component](icon.md).
 > 
 
 Type: ReadonlyArray<TokenGroupProps.Item>
+
+Required: No
+
+
+### limit
+
+> Specifies the maximum number of displayed tokens. If the property isn't set, all of the tokens are displayed.
+
+Type: Number
 
 Required: No
 

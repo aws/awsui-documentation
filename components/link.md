@@ -100,6 +100,16 @@ Type: String
 Required: No
 
 
+### rel
+
+> Adds a `rel` attribute to the link. If the `rel` property is provided, it overrides the default behaviour.
+> By default, the component sets the `rel` attribute to "noopener noreferrer" when `external` is `true` or `target` is `"_blank"`.
+
+Type: String
+
+Required: No
+
+
 ### target
 
 > Specifies where to open the linked URL. Set this to `_blank` to open the URL

@@ -240,6 +240,21 @@ Valid values: `string | (item: T) => string`
 Required: No
 
 
+### variant
+
+> Specify a cards variant with one of the following:
+> * `container` - Use this variant to have the cards displayed as a container.
+> * `full-page` – Use this variant when cards is the primary element on the page.
+
+Type: String
+
+Default: `'container'`
+
+Valid values: `container | full-page`
+
+Required: No
+
+
 ### visibleSections
 
 > Specifies an array containing the `id` of each visible section. If not set, all sections are displayed.
