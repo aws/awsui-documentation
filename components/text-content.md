@@ -1,4 +1,4 @@
-# Text Content (TextContent)
+# Text content (TextContent)
 
 Use to style chunks of HTML by applying default typographical styles to the content.
 

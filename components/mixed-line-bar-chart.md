@@ -157,7 +157,7 @@ Required: No
 
 Type: 
 ```
-MixedLineBarChartProps.I18nStrings {
+CartesianChartProps.I18nStrings {
   chartAriaRoleDescription?: string
   detailPopoverDismissAriaLabel?: string
   filterLabel?: string
@@ -165,9 +165,9 @@ MixedLineBarChartProps.I18nStrings {
   filterSelectedAriaLabel?: string
   legendAriaLabel?: string
   xAxisAriaRoleDescription?: string
-  xTickFormatter?: MixedLineBarChartProps.TickFormatter<T>
+  xTickFormatter?: CartesianChartProps.TickFormatter<T>
   yAxisAriaRoleDescription?: string
-  yTickFormatter?: MixedLineBarChartProps.TickFormatter<number>
+  yTickFormatter?: CartesianChartProps.TickFormatter<number>
 }
 ```
 
@@ -215,14 +215,14 @@ Required: No
 
 > Array that represents the source of data for the displayed chart.
 > Each element can represent a line series, bar series, or a threshold, and can have the following properties:
-> * `title` (string): Human-readable title for this series
+> * `title` (string): A human-readable title for this series
 > * `type` (string): Series type (`"line"`, `"bar"`, or `"threshold"`)
 > * `data` (Array): An array of data points, represented as objects with `x` and `y` properties
-> * `color` (string): Optional color hex value for this series which takes priority over the automatically assigned color
-> * `valueFormatter` (Function): Optional function that formats data values before rendering in the UI, e.g. in the details popover.
+> * `color` (string): (Optional) A color hex value for this series. When assigned, it takes priority over the automatically assigned color
+> * `valueFormatter` (Function): (Optional) A function that formats data values before rendering in the UI, For example, in the details popover.
 > 
 
-Type: ReadonlyArray<MixedLineBarChartProps.DataSeries<T> | MixedLineBarChartProps.ThresholdSeries>
+Type: ReadonlyArray<MixedLineBarChartProps.ChartSeries<T>>
 
 Required: Yes
 
@@ -271,7 +271,7 @@ Required: No
 
 > Determines the domain of the x axis, i.e. the range of values that will be visible in the chart.
 > For numerical and time-based data this is represented as an array with two values: `[minimumValue, maximumValue]`.
-> For categorical data this is represented as an array of strings that determine the catogories to display.
+> For categorical data this is represented as an array of strings that determine the categories to display.
 > It is recommended to set this explicitly. If not, the component will determine a domain that fits all data points.
 > When controlling this directly, make sure to update the value based on filtering changes.
 > 
@@ -381,10 +381,8 @@ Required: No
 
 Detail type: 
 ```
-MixedLineBarChartProps.FilterChangeDetail {
-  visibleSeries: ReadonlyArray<
-    MixedLineBarChartProps.ChartSeries<T>
-  >
+CartesianChartProps.FilterChangeDetail {
+  visibleSeries: ReadonlyArray<Series>
 }
 ```
 
@@ -398,8 +396,8 @@ Cancelable: No
 
 Detail type: 
 ```
-MixedLineBarChartProps.HighlightChangeDetail {
-  highlightedSeries: MixedLineBarChartProps.ChartSeries<T> | null
+CartesianChartProps.HighlightChangeDetail {
+  highlightedSeries: Series | null
 }
 ```
 

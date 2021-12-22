@@ -152,7 +152,9 @@ Required: No
 
 ### format
 
-> Specifies the granularity of the time input.
+> Specifies the format of the time input.
+> Use it to restrict the granularity of time that the user can enter.
+> 
 
 Type: String
 

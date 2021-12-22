@@ -233,7 +233,7 @@ Required: No
 ### options
 
 > Specifies an array of options that are displayed to the user as a dropdown list.
-> The options can be grouped using `OptionsGroup` objects.
+> The options can be grouped using `OptionGroup` objects.
 > Note: Only one level of option nesting is supported.
 > 
 > If you want to use the built-in filtering capabilities of this component, provide

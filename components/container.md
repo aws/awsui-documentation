@@ -52,6 +52,20 @@ Type: String
 Required: No
 
 
+### variant
+
+> Specify a container variant with one of the following:
+> * `default` - Use this variant in standalone context.
+> * `stacked` - Use this variant adjacent to other stacked containers (such as a container,
+>               table).
+
+Type: String
+
+Valid values: `default | stacked`
+
+Required: No
+
+
 
 
 

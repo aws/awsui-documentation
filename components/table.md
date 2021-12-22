@@ -264,6 +264,23 @@ Valid values: `string | (item: T) => string`
 Required: No
 
 
+### variant
+
+> Specify a table variant with one of the following:
+> * `container` - Use this variant to have the table displayed within a container.
+> * `embedded` - Use this variant within a parent container (such as a modal, expandable
+>                section, container or split panel).
+> * `stacked` - Use this variant adjacent to other stacked containers (such as a container,
+>               table).
+> * `full-page` – Use this variant when table is the primary element on the page.
+
+Type: String
+
+Valid values: `container | embedded | stacked | full-page`
+
+Required: No
+
+
 ### visibleColumns
 
 > Specifies an array containing the `id`s of visible columns. If not set, all columns are displayed.

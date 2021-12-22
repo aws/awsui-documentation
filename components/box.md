@@ -85,7 +85,7 @@ Required: No
 
 Type: String
 
-Valid values: `light | normal | bold`
+Valid values: `light | normal | bold | heavy`
 
 Required: No
 
@@ -115,7 +115,7 @@ Required: No
 > }
 > ```
 > 
-> The size can be `n`, `xxs`, `xs`, `s`, `m`, `l`, `xl`, `xxl`, where `n` stands for none.
+> The size can be `n`, `xxxs`, `xxs`, `xs`, `s`, `m`, `l`, `xl`, `xxl`, `xxxl`, where `n` stands for none.
 > 
 >  For example, `margin="s"` adds a small margin to all sides.
 > `margin={{ right: "l", bottom: "s" }}` adds a small margin to the bottom and a large margin to the right.
@@ -142,13 +142,22 @@ Required: No
 > }
 > ```
 > 
-> The size can be `n`, `xxs`, `xs`, `s`, `m`, `l`, `xl`, `xxl`, where `n` stands for none.
+> The size can be `n`, `xxxs`, `xxs`, `xs`, `s`, `m`, `l`, `xl`, `xxl`, `xxxl`, where `n` stands for none.
 > 
 >  For example, `padding="s"` adds small padding to all sides.
 > `padding={{ right: "l", bottom: "s" }}` adds small padding to the bottom and large padding to the right.
 > 
 
 Type: BoxProps.Spacing | BoxProps.SpacingSize
+
+Required: No
+
+
+### tagOverride
+
+> Overrides the default HTML tag provided by the variant.
+
+Type: String
 
 Required: No
 
@@ -166,13 +175,19 @@ Required: No
 
 ### variant
 
-> Defines the style and HTML tag name of element to display.
+> Defines the style of element to display.
+> - If you set it to `'div'`, `'span'`, `'h1'`, `'h2'`, `'h3'`, `'h4'`, `'h5'`, `'p'`, `'strong'`, `'small'`, `'code'`, `'pre'`, or `'samp'`, the variant is also used as the HTML tag name.
+> - If you set it to `awsui-key-label`, the component will display as a `div`.
+> - If you set it to `awsui-value-large`, the component will display as a `span`.
+> 
+> Override the HTML tag by using property `tagOverride`.
+> 
 
 Type: String
 
 Default: `"div"`
 
-Valid values: `div | span | h1 | h2 | h3 | h4 | h5 | p | strong | small | code | pre | samp`
+Valid values: `div | span | h1 | h2 | h3 | h4 | h5 | p | strong | small | code | pre | samp | awsui-key-label | awsui-value-large`
 
 Required: No
 

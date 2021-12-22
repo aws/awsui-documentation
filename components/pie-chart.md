@@ -52,7 +52,7 @@ Required: No
 
 > An array that represents the source of data for the displayed segments.
 > Each element can have the following properties:
-> * `title` (string) - Human-readable title for this data point.
+> * `title` (string) - A human-readable title for this data point.
 > * `value` (number) - Numeric value that determines the segment size.
 >                        A segment with a value of zero (0) or lower (negative number) won't have a segment.
 > * `color`: (string) - (Optional) Color value for this segment that takes priority over the automatically assigned color.

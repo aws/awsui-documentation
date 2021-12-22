@@ -54,12 +54,13 @@ Required: No
 > * `h1` - Use this for page level headers.
 > * `h2` - Use this for container level headers.
 > * `h3` - Use this for section level headers.
+> * `awsui-h1-sticky` - Use this for sticky headers in cards and tables.
 
 Type: String
 
 Default: `"h2"`
 
-Valid values: `h1 | h2 | h3`
+Valid values: `h1 | h2 | h3 | awsui-h1-sticky`
 
 Required: No
 

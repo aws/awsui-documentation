@@ -78,8 +78,8 @@ Required: No
 
 ### iconAlt
 
-> Specifies alternate text for the custom icon, for accessibility compliance. This property has an effect
-> only when the `iconUrl` property is set. Default icons already have predefined names.
+> Specifies alternate text for a custom icon. We recommend that you provide this for accessibility.
+> This property is ignored if you use a predefined icon or if you set your custom icon using the `iconSvg` slot.
 
 Type: String
 
@@ -92,14 +92,16 @@ Required: No
 
 Type: String
 
-Valid values: `add-plus | angle-left-double | angle-left | angle-right-double | angle-right | angle-up | angle-down | arrow-left | bug | call | calendar | caret-down-filled | caret-down | caret-left-filled | caret-right-filled | caret-up-filled | caret-up | contact | close | copy | download | edit | envelope | expand | external | file-open | file | filter | folder-open | folder | heart | key | lock-private | menu | microphone | notification | refresh | search | settings | share | status-in-progress | status-info | status-negative | status-pending | status-positive | status-stopped | status-warning | treeview-collapse | treeview-expand | undo | unlocked | upload | view-full | view-horizontal | view-vertical | zoom-in | zoom-out`
+Valid values: `add-plus | angle-left-double | angle-left | angle-right-double | angle-right | angle-up | angle-down | arrow-left | bug | call | calendar | caret-down-filled | caret-down | caret-left-filled | caret-right-filled | caret-up-filled | caret-up | contact | close | copy | download | edit | ellipsis | envelope | expand | external | file-open | file | filter | folder-open | folder | heart | key | lock-private | menu | microphone | notification | refresh | search | settings | share | status-in-progress | status-info | status-negative | status-pending | status-positive | status-stopped | status-warning | treeview-collapse | treeview-expand | undo | unlocked | upload | user-profile | view-full | view-horizontal | view-vertical | zoom-in | zoom-out`
 
 Required: No
 
 
 ### iconUrl
 
-> Specifies the URL for a custom icon image. You should use this instead of the `icon` property if the desired icon isn't available.
+> Specifies the URL of a custom icon. Use this property if the icon you want isn't available.
+> If you set both `iconUrl` and `iconSvg`, `iconSvg` will take precedence.
+> 
 
 Type: String
 
@@ -184,6 +186,31 @@ Required: No
 
 
 
+### iconSvg
+
+> Specifies the SVG of a custom icon.
+> Use this property if you want your custom icon to inherit colors dictated by variant or hover states.
+> When this property is set, the component will be decorated with `aria-hidden="true"`. Ensure that the `svg` element:
+> - has attribute `focusable="false"`.
+> - has `viewBox="0 0 16 16"`.
+> 
+> If you set the `svg` element as the root node of the slot, the component will automatically
+> - set `stroke="currentColor"`, `fill="none"`, and `vertical-align="top"`.
+> - set the stroke width based on the size of the icon.
+> - set the width and height of the SVG element based on the size of the icon.
+> 
+> If you don't want these styles to be automatically set, wrap the `svg` element into a `span`.
+> You can still set the stroke to `currentColor` to inherit the color of the surrounding elements.
+> 
+> If you set both `iconUrl` and `iconSvg`, `iconSvg` will take precedence.
+> 
+> *Note:* Remember to remove any additional elements (for example: `defs`) and related CSS classes from SVG files exported from design software.
+> In most cases, they aren't needed, as the `svg` element inherits styles from the icon component.
+> 
+
+
+
+
 
 
 
@@ -204,6 +231,20 @@ ClickDetail {
   metaKey: boolean
   shiftKey: boolean
 }
+```
+
+Cancelable: Yes
+
+
+
+### onFollow
+
+> Called when the user clicks on the button with the left mouse button without pressing
+> modifier keys (that is, CTRL, ALT, SHIFT, META), and the button has an `href` set.
+
+Detail type: 
+```
+Null
 ```
 
 Cancelable: Yes
