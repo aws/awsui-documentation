@@ -352,6 +352,7 @@ Cancelable: No
 
 > Use this event to asynchronously load filteringOptions, component currently needs.  The detail object contains following properties:
 > * `filteringProperty` - The property for which you need to fetch the options.
+> * `filteringOperator` - The operator for which you need to fetch the options.
 > * `filteringText` - The value that you need to use to fetch options.
 > * `firstPage` - Indicates that you should fetch the first page of options for a `filteringProperty` that match the `filteringText`.
 > * `samePage` - Indicates that you should fetch the same page that you have previously fetched (for example, when the user clicks on the recovery button).
@@ -360,6 +361,7 @@ Cancelable: No
 Detail type: 
 ```
 PropertyFilterProps.LoadItemsDetail {
+  filteringOperator?: PropertyFilterProps.ComparisonOperator
   filteringProperty?: PropertyFilterProps.FilteringProperty
   filteringText: string
   firstPage: boolean

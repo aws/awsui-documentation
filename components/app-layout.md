@@ -310,8 +310,7 @@ Required: No
 
 ### breadcrumbs
 
-> Breadcrumbs should be defined within this slot in order to benefit from the
-> responsive breadcrumb pattern.
+> Use this slot to add the [breadcrumb group component](breadcrumb-group.md) to the app layout.
 
 
 
@@ -348,7 +347,7 @@ Required: No
 
 ### splitPanel
 
-> Split panel.
+> Use this slot to add the [split panel component](split-panel.md) to the app layout.
 
 
 
