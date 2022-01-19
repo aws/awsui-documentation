@@ -61,6 +61,24 @@ Type: String
 Required: No
 
 
+### dateOnly
+
+> Hides time inputs and changes the input format to date-only, e.g. 2021-04-06.
+> Do not use `dateOnly` flag conditionally. The component does not trigger the value update
+> when the flag changes which means the value format can become inconsistent.
+> 
+> Default: false.
+> 
+
+Type: Boolean
+
+Default: `false`
+
+Valid values: `true | false`
+
+Required: No
+
+
 ### disabled
 
 > Specifies that the component is disabled, preventing the user from
@@ -256,6 +274,8 @@ Required: No
 > Specifies the format of the time input for absolute ranges.
 > Use to restrict the granularity of time that the user can enter.
 > 
+> Has no effect when `dateOnly` is true.
+> 
 
 Type: String
 
@@ -270,6 +290,8 @@ Required: No
 
 > The time offset from UTC in minutes that should be used to
 > display and produce values.
+> Has no effect when `dateOnly` is true.
+> 
 > Default: the user's current time offset as provided by the browser.
 > 
 

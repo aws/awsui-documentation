@@ -25,6 +25,27 @@ Type: Number
 Required: No
 
 
+### allowSkipTo
+
+> When set to `false`, the *skip-to* button is never shown.
+> When set to `true`, the *skip-to* button may appear to offer faster navigation for the user.
+> The *skip-to* button only allows to skip optional steps. It is shown when there is one or more optional
+> steps ahead having no required steps in-between.
+> 
+> Note: the *skip-to* button requires the function i18nStrings.skipToButtonLabel to be defined.
+> 
+> Defaults to `false`.
+> 
+
+Type: Boolean
+
+Default: `false`
+
+Valid values: `true | false`
+
+Required: No
+
+
 ### className
 
 > Adds the specified classes to the root element of the component.
@@ -43,6 +64,8 @@ Required: No
 >    and returns a string responsible for the navigation summary on smaller screens. For example, "Step 1 of 3". The parameters are as follows:
 >    - `stepNumber` (number) - The step number that the user is currently on.
 >    - `stepsCount` (number) - The total number of steps in the wizard.
+> - `skipToButtonLabel`: ((targetStep: WizardProps.Step, targetStepNumber: number) => string) - An optional function that accepts the target step object
+>    and the target step number (1-based indexing), and returns a string to be used as the *skip-to* button label. For example, "Skip to Step 2" or "Skip to end".
 > - `cancelButton` (string) - The text of the button that enables the user to exit the flow.
 > - `previousButton` (string) - The text of the button that enables the user to return to the previous step.
 > - `nextButton` (string) - The text of the button that enables the user to move to the next step.
@@ -61,6 +84,10 @@ WizardProps.I18nStrings {
   collapsedStepsLabel: (
     stepNumber: number,
     stepsCount: number
+  ) => string
+  skipToButtonLabel?: (
+    targetStep: WizardProps.Step,
+    targetStepNumber: number
   ) => string
   stepNumberLabel: (stepNumber: number) => string
 }
@@ -116,6 +143,18 @@ Required: Yes
 
 
 
+## Slots
+
+
+
+### secondaryActions
+
+> Specifies left-aligned secondary actions for the wizard. Use a button dropdown if multiple actions are required.
+
+
+
+
+
 
 
 ## Events
@@ -137,8 +176,8 @@ Cancelable: No
 > The event `detail` includes the following:
 > - `requestedStepIndex` - The index of the requested step.
 > - `reason` - The user action that triggered the navigation event. It can be `next` (when the user clicks the *next* button),
-> `previous` (when the user clicks the *previous* button), or `step` (an enabled step link in the navigation pane).
-> 
+> `previous` (when the user clicks the *previous* button), `step` (an enabled step link in the navigation pane),
+> or `skip` (when navigated using navigation pane or the *skip-to* button to the previously unvisited step).
 > 
 
 Detail type: 
