@@ -26,6 +26,15 @@ Type: String
 Required: No
 
 
+### expandAriaLabel
+
+> Provides an `aria-label` to the ellipsis button that screen-readers can read (for accessibility).
+
+Type: String
+
+Required: No
+
+
 ### id
 
 > Adds the specified ID to the root element of the component.

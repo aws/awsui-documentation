@@ -67,7 +67,7 @@ Required: No
 > Do not use `dateOnly` flag conditionally. The component does not trigger the value update
 > when the flag changes which means the value format can become inconsistent.
 > 
-> Default: false.
+> Default: `false`.
 > 
 
 Type: Boolean
@@ -83,6 +83,24 @@ Required: No
 
 > Specifies that the component is disabled, preventing the user from
 > modifying the value. A disabled component cannot receive focus.
+
+Type: Boolean
+
+Default: `false`
+
+Valid values: `true | false`
+
+Required: No
+
+
+### expandToViewport
+
+> By default, the dropdown height is constrained to fit inside the height of its parent element.
+> Enabling this property will allow the dropdown to extend beyond its parent, using fixed positioning and
+> [React Portals](https://reactjs.org/docs/portals.html). Enable this setting if you need the dropdown
+> to ignore overflow: hidden or scroll parents, such as in a split view layout.
+> We do not recommend enabling this property if you don't have this requirement, because fixed positioning results
+> in slight visible lag when scrolling complex pages. Use with discretion.
 
 Type: Boolean
 
@@ -215,6 +233,24 @@ Required: No
 > Specifies the placeholder text that is rendered when the value is empty.
 
 Type: String
+
+Required: No
+
+
+### rangeSelectorMode
+
+> Determines the range selector mode as follows:
+> * `default` for combined absolute/relative range selector.
+> * `absolute-only` for absolute-only range selector.
+> * `relative-only` for relative-only range selector.
+> By default, the range selector mode is `default`.
+> 
+
+Type: String
+
+Default: `'default'`
+
+Valid values: `default | absolute-only | relative-only`
 
 Required: No
 

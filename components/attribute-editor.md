@@ -71,7 +71,7 @@ Required: No
 > button is not rendered and the user can't remove the item.
 > By default, all items are removable.
 
-Type: (item: T) => boolean
+Type:  (item: T) => boolean
 
 Default: `() => true`
 

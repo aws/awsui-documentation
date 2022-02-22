@@ -40,6 +40,17 @@ Valid values: `true | false`
 Required: No
 
 
+### download
+
+> Specifies whether the linked URL will prompt the user to download, instead of navigating when the user clicks on it.
+> You can specify a string value, which will be suggested as the name of the downloaed file.
+> This property only applies when an `href` is provided.
+
+Type: Boolean | string
+
+Required: No
+
+
 ### formAction
 
 > The form action that is performed by a button click.

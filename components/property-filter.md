@@ -92,7 +92,7 @@ Required: No
 > Enabling this property will allow the dropdown to extend beyond its parent, using fixed positioning and
 > [React Portals](https://reactjs.org/docs/portals.html). Enable this setting if you need the dropdown
 > to ignore overflow: hidden or scroll parents, such as in a split view layout.
-> We do not recommend enabling this property if you don't have this requirement. Fixed positioning results
+> We do not recommend enabling this property if you don't have this requirement, because fixed positioning results
 > in slight visible lag when scrolling complex pages. Use with discretion.
 
 Type: Boolean
