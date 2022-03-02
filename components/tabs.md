@@ -49,6 +49,19 @@ Type: String
 Required: No
 
 
+### disableContentPaddings
+
+> Determines whether the tab content has padding. If `true`, removes the default padding from the tab content area.
+
+Type: Boolean
+
+Default: `false`
+
+Valid values: `true | false`
+
+Required: No
+
+
 ### id
 
 > Adds the specified ID to the root element of the component.

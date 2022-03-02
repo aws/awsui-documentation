@@ -66,14 +66,15 @@ Required: No
 ### autoComplete
 
 > Specifies whether to enable a browser's autocomplete functionality for this input.
-> In some cases it might be appropriate to disable autocomplete (for
-> example, for security-sensitive fields). To use it correctly, set the `name` property.
+> In some cases it might be appropriate to disable autocomplete (for example, for security-sensitive fields).
+> To use it correctly, set the `name` property.
+> You can either provide a boolean value to set the property to "on" or "off", or specify a string value
+> for the [autocomplete](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) attribute.
+> 
 
-Type: Boolean
+Type: Boolean | string
 
 Default: `true`
-
-Valid values: `true | false`
 
 Required: No
 
