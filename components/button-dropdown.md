@@ -89,7 +89,7 @@ Required: No
 > 
 > - `text` (string) - description shown in the menu for this item. Mandatory for individual items, optional for categories.
 > 
-> - `disabled` (boolean) - whether the item is disabled. Disabled items are not clickable.
+> - `disabled` (boolean) - whether the item is disabled. Disabled items are not clickable, but they can be highlighted with the keyboard to make them accessible.
 > 
 > - `items` (ReadonlyArray<Item>): an array of item objects. Items will be rendered as nested menu items but only for the first nesting level, multi-nesting is not supported.
 > An item which belongs to nested group has the following properties: `id`, `text`, `disabled` and `description`.
