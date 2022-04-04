@@ -483,6 +483,22 @@ Cancelable: No
 
 
 
+### onSelect
+
+> Called whenever a user selects an option in the dropdown. Don't use this event as the only way to handle user input.
+> Instead, use `onSelect` in combination with the `onChange` handler only as an optional convenience for the user.
+
+Detail type: 
+```
+AutosuggestProps.SelectDetail {
+  value: string
+}
+```
+
+Cancelable: No
+
+
+
 
 
 

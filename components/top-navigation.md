@@ -24,6 +24,9 @@ Required: No
 Type: 
 ```
 TopNavigationProps.I18nStrings {
+  overflowMenuBackIconAriaLabel?: string
+  overflowMenuDismissIconAriaLabel?: string
+  overflowMenuTitleText: string
   overflowMenuTriggerText: string
   searchDismissIconAriaLabel?: string
   searchIconAriaLabel?: string
@@ -100,6 +103,8 @@ Required: Yes
 > 
 
 Type: ReadonlyArray<TopNavigationProps.Utility>
+
+Default: `[]`
 
 Required: No
 
