@@ -10,7 +10,7 @@ Displays a series of navigational links in a hierarchical list.
 
 ### ariaLabel
 
-> Provides an `aria-label` to the breadcrumb group that screen-readers can read (for accessibility).
+> Provides an `aria-label` to the breadcrumb group that screen readers can read (for accessibility).
 
 Type: String
 
@@ -28,7 +28,7 @@ Required: No
 
 ### expandAriaLabel
 
-> Provides an `aria-label` to the ellipsis button that screen-readers can read (for accessibility).
+> Provides an `aria-label` to the ellipsis button that screen readers can read (for accessibility).
 
 Type: String
 

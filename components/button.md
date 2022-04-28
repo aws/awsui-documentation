@@ -42,8 +42,8 @@ Required: No
 
 ### download
 
-> Specifies whether the linked URL will prompt the user to download, instead of navigating when the user clicks on it.
-> You can specify a string value, which will be suggested as the name of the downloaed file.
+> Specifies whether the linked URL, when selected, will prompt the user to download instead of navigate.
+> You can specify a string value that will be suggested as the name of the downloaded file.
 > This property only applies when an `href` is provided.
 
 Type: Boolean | string

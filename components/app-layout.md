@@ -63,13 +63,16 @@ Required: No
 
 > Determines the default behavior of the component. Based on the content type,
 > the width of the content slot and the initial state of the navigation panel (that is, open or closed) have different values.
-> | `contentType` | Navigation | Max content width |
+> | `contentType` | Navigation | Max content width (*) |
 > |---|---|---|
 > | `default` | Open | - |
 > | `cards` | Open | - |
 > | `table` | Open | - |
 > | `form` | Closed | 800px |
 > | `wizard` | Closed | 1080px |
+> 
+> (*) For Visual Refresh the max content width is based on the viewport width for all types. To have the full width
+> on the main content panel, set maxContentWidth to `Number.MAX_VALUE`.
 > 
 > If you have a property `navigationOpen` or `maxContentWidth` explicitly set, it will take precedence
 > over the default coming from the content type.
@@ -204,8 +207,6 @@ Required: No
 
 Type: Number
 
-Default: `280`
-
 Required: No
 
 
@@ -295,8 +296,6 @@ Required: No
 > Tools drawer width in pixels.
 
 Type: Number
-
-Default: `290`
 
 Required: No
 

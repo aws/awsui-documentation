@@ -140,7 +140,7 @@ Type: String
 
 Default: `'secondary'`
 
-Valid values: `primary | secondary | info`
+Valid values: `primary | secondary | info | awsui-value-large`
 
 Required: No
 

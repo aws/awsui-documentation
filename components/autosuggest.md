@@ -155,12 +155,12 @@ Required: No
 
 ### expandToViewport
 
-> By default, the dropdown height is constrained to fit inside the height of its parent element.
-> Enabling this property will allow the dropdown to extend beyond its parent, using fixed positioning and
-> [React Portals](https://reactjs.org/docs/portals.html). Enable this setting if you need the dropdown
-> to ignore overflow: hidden or scroll parents, such as in a split view layout.
-> We do not recommend enabling this property if you don't have this requirement, because fixed positioning results
-> in slight visible lag when scrolling complex pages. Use with discretion.
+> Enabling this property will allow the dropdown to extend beyond its parent by using fixed positioning and
+> [React Portals](https://reactjs.org/docs/portals.html).
+> If you want the dropdown to ignore the `overflow` CSS property of its parents,
+> such as in a split view layout, enable this property.
+> However, use discretion. If you don't need to, we recommend you don't enable this property because fixed positioning results
+> in a slight, visible lag when scrolling complex pages.
 
 Type: Boolean
 
