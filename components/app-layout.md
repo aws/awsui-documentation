@@ -204,8 +204,6 @@ Required: No
 
 Type: Number
 
-Default: `280`
-
 Required: No
 
 
@@ -295,8 +293,6 @@ Required: No
 > Tools drawer width in pixels.
 
 Type: Number
-
-Default: `290`
 
 Required: No
 
