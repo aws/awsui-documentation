@@ -1,6 +1,6 @@
 # Icon
 
-Enables you to display basic icons that match the design system sizes, colors, and typography.
+With an icon, you can display basic icons that match [systemname] sizes, colors, and typography.
 
 
 

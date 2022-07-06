@@ -1,6 +1,6 @@
 # Header
 
-Summarizes the content that's displayed under it and provides a space for optional action buttons. Previously known as "Action stripe" in v2.x.
+Summarizes the content that's displayed under it and provides a space for optional action buttons. 
 
 
 

@@ -1,6 +1,6 @@
 # Column layout (ColumnLayout)
 
-Enables you to position content in columns.
+Column layout helps you position content in columns.
 
 
 
@@ -13,6 +13,8 @@ Enables you to position content in columns.
 > Controls whether dividers are placed between rows and columns.
 
 Type: String
+
+Default: `"none"`
 
 Valid values: `none | vertical | horizontal | all`
 
@@ -34,6 +36,8 @@ Required: No
 > Valid values are any integer between 1 and 4.
 
 Type: Number
+
+Default: `1`
 
 Required: No
 
@@ -65,6 +69,8 @@ Required: No
 > Specifies the content type. This determines the spacing of the grid.
 
 Type: String
+
+Default: `"default"`
 
 Valid values: `default | text-grid`
 

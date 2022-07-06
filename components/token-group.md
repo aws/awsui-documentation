@@ -72,6 +72,8 @@ Required: No
 
 Type: ReadonlyArray<TokenGroupProps.Item>
 
+Default: `[]`
+
 Required: No
 
 

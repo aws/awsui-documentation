@@ -1,6 +1,6 @@
 # Radio group (RadioGroup)
 
-A form element that enables the user to choose one of a predefined set of options.
+With this form element, users can choose one of a predefined set of options.
 
 
 

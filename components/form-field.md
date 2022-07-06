@@ -1,6 +1,6 @@
 # Form field (FormField)
 
-Enables the creation of properly styled controls in a form.
+With the form field, users can create properly-styled controls in a form.
 
 
 

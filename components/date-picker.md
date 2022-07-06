@@ -1,6 +1,6 @@
 # Date picker (DatePicker)
 
-Enables users to enter or choose a date value.
+With the date picker, users can enter or choose a date value.
 
 
 
@@ -148,8 +148,8 @@ Required: No
 ### invalid
 
 > Overrides the invalidation state. Usually the invalid state
-> comes from the parent `FormField` / `awsui-form-field`
-> component, however sometimes you need to override its
+> comes from the parent `FormField`component,
+> however sometimes you need to override its
 > state when you have more than one input within a
 > single form field.
 

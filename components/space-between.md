@@ -1,6 +1,6 @@
 # Space between (SpaceBetween)
 
-A helper component that enables you to add consistent spacing between elements on your page.
+A helper component that helps you add consistent spacing between elements on your page.
 
 
 

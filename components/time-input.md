@@ -1,6 +1,6 @@
 # Time input (TimeInput)
 
-A form element that enables users to enter an absolute time value.
+A form element in which a user can enter an absolute time value.
 
 
 
@@ -177,8 +177,8 @@ Required: No
 ### invalid
 
 > Overrides the invalidation state. Usually the invalid state
-> comes from the parent `FormField` / `awsui-form-field`
-> component, however sometimes you need to override its
+> comes from the parent `FormField`component,
+> however sometimes you need to override its
 > state when you have more than one input within a
 > single form field.
 

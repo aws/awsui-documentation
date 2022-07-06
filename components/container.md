@@ -1,6 +1,6 @@
 # Container
 
-Enables you to present a group of pieces of content, indicating that the items are related. For example, a table is a type of container.
+With the container, you can present a group of pieces of content, indicating that the items are related. For example, a table is a type of container.
 
 
 
@@ -60,6 +60,8 @@ Required: No
 >               table).
 
 Type: String
+
+Default: `"default"`
 
 Valid values: `default | stacked`
 

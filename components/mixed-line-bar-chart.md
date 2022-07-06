@@ -224,6 +224,8 @@ Required: No
 
 Type: ReadonlyArray<MixedLineBarChartProps.ChartSeries<T>>
 
+Default: `[]`
+
 Required: Yes
 
 

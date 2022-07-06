@@ -1,6 +1,6 @@
 # Collection preferences (CollectionPreferences)
 
-Enables the user to manage display preferences within a collection.
+With collection preferences, users can manage their display preferences within a collection.
 
 
 

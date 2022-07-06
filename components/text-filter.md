@@ -1,6 +1,6 @@
 # Text filter (TextFilter)
 
-Enables users to enter text that’s used to match specific items in a collection.
+With a text filter, users can enter text that’s used to match specific items in a collection.
 
 
 

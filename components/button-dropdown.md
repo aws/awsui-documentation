@@ -1,6 +1,6 @@
 # Button dropdown (ButtonDropdown)
 
-Enables you to group a set of actions under one button.
+With a button dropdown, you can group a set of actions under one button.
 
 
 

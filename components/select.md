@@ -184,8 +184,8 @@ Required: No
 ### invalid
 
 > Overrides the invalidation state. Usually the invalid state
-> comes from the parent `FormField` / `awsui-form-field`
-> component, however sometimes you need to override its
+> comes from the parent `FormField`component,
+> however sometimes you need to override its
 > state when you have more than one input within a
 > single form field.
 
@@ -220,6 +220,24 @@ Required: No
 
 > Specifies an array of options that are displayed to the user as a dropdown list.
 > The options can be grouped using `OptionGroup` objects.
+> #### Option
+> - `value` (string) - The returned value of the option when selected.
+> - `label` (string) - (Optional) Option text displayed to the user.
+> - `description` (string) - (Optional) Further information about the option that appears below the label.
+> - `disabled` (boolean) - (Optional) Determines whether the option is disabled.
+> - `labelTag` (string) - (Optional) A label tag that provides additional guidance, shown next to the label.
+> - `tags` [string[]] - (Optional) A list of tags giving further guidance about the option.
+> - `filteringTags` [string[]] - (Optional) A list of additional tags used for automatic filtering.
+> - `iconName` (string) - (Optional) Specifies the name of an [icon](icon.md) to display in the option.
+> - `iconAlt` (string) - (Optional) Specifies alternate text for a custom icon, for use with `iconUrl`.
+> - `iconUrl` (string) - (Optional) URL of a custom icon.
+> - `iconSvg` (ReactNode) - (Optional) Custom SVG icon. Equivalent to the `svg` slot of the [icon component](icon.md).
+> 
+> #### OptionGroup
+> - `label` (string) - Option group text displayed to the user.
+> - `disabled` (boolean) - (Optional) Determines whether the option group is disabled.
+> - `options` (Option[]) - (Optional) The options under this group.
+> 
 > Note: Only one level of option nesting is supported.
 > 
 > If you want to use the built-in filtering capabilities of this component, provide
@@ -260,7 +278,7 @@ Required: No
 > Overrides the element that is announced to screen readers
 > when the highlighted option changes. By default, this announces
 > the option's name and properties, and its selected state if
-> the selectedLabel property is defined.
+> the `selectedLabel` property is defined.
 > The highlighted option is provided, and its group (if groups
 > are used and it differs from the group of the previously highlighted option).
 > For more information, see the

@@ -60,6 +60,20 @@ Valid values: `error | warning | success | info | stopped | pending | in-progres
 Required: No
 
 
+### wrapText
+
+> Specifies if the text content should wrap. If you set it to false, it prevents the text from wrapping
+> and truncates it with an ellipsis.
+
+Type: Boolean
+
+Default: `true`
+
+Valid values: `true | false`
+
+Required: No
+
+
 
 
 

@@ -1,6 +1,6 @@
 # Button
 
-Enables users to trigger actions in the user interface.
+Allows users to initiate actions in the user interface.
 
 
 

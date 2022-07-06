@@ -1,6 +1,6 @@
 # Tabs
 
-Enables users to switch between diﬀerent categories of information in the same view.
+With tabs, users can switch between different categories of information in the same view.
 
 
 

@@ -32,6 +32,8 @@ Required: No
 
 Type: String
 
+Default: `"Show path"`
+
 Required: No
 
 

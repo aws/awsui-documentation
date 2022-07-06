@@ -1,6 +1,6 @@
 # Grid
 
-A flexible component that enables you to distribute content on a page and helps you to build consistent, balanced, and responsive layouts across your application.
+The grid component is used to distribute content on a page.  It helps build consistent, balanced, and responsive layouts across an application.
 
 
 

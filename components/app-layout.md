@@ -1,6 +1,6 @@
 # App layout (AppLayout)
 
-Provides the basic layout for all types of pages, including collapsible side navigation, tools panel and split panel.
+Provides the basic layout for all types of pages, including collapsible side navigation, tools panel, and split panel.
 
 
 
@@ -61,19 +61,8 @@ Required: No
 
 ### contentType
 
-> Determines the default behavior of the component. Based on the content type,
-> the width of the content slot and the initial state of the navigation panel (that is, open or closed) have different values.
-> | `contentType` | Navigation | Max content width |
-> |---|---|---|
-> | `default` | Open | - |
-> | `cards` | Open | - |
-> | `table` | Open | - |
-> | `form` | Closed | 800px |
-> | `wizard` | Closed | 1080px |
-> 
-> If you have a property `navigationOpen` or `maxContentWidth` explicitly set, it will take precedence
-> over the default coming from the content type.
-> 
+> Determines the default behavior of the component based on some predefined page layouts.
+> Individual properties will always take precedence over the default coming from the content type.
 
 Type: String
 
@@ -157,6 +146,8 @@ Required: No
 ### maxContentWidth
 
 > Maximum main content panel width in pixels.
+> If set to `Number.MAX_VALUE`, the main content panel will occupy the full available width.
+> 
 
 Type: Number
 
@@ -334,9 +325,9 @@ Required: No
 
 ### notifications
 
-> Displayed on top of the main content in the scrollable area,
-> it occupies the full width and is not affected by the padding that is added to the content slot.
+> Displayed on top of the main content in the scrollable area.
 > Conceived to contain notifications (flash messages).
+> 
 
 
 

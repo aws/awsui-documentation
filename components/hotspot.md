@@ -1,6 +1,6 @@
 # Hotspot
 
-In Hands-on tutorials, hotspots are invisible containers that mark the spots where hotspot icons should be placed. Hotspot icons are rendered by the Annotation context and are used to open and close annotation popovers.
+In hands-on tutorials, hotspots are invisible containers that mark the spots where hotspot icons should be placed. Hotspot icons are rendered by the annotation context and are used to open and close annotation popovers.
 
 
 

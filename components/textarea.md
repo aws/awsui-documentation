@@ -1,6 +1,6 @@
-# Textarea
+# Text area (Textarea)
 
-A form element that provides a multiline, plain-text input control.
+A form element that provides a multi-line, plain-text input control.
 
 
 
@@ -180,8 +180,8 @@ Required: No
 ### invalid
 
 > Overrides the invalidation state. Usually the invalid state
-> comes from the parent `FormField` / `awsui-form-field`
-> component, however sometimes you need to override its
+> comes from the parent `FormField`component,
+> however sometimes you need to override its
 > state when you have more than one input within a
 > single form field.
 

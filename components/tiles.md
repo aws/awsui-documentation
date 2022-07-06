@@ -1,6 +1,6 @@
 # Tiles
 
-A form element that's an extension of a radio group with additional metadata to facilitate comparisons or progressive disclosure. As with a radio group, tiles enable the user to choose one of a predefined set of options.
+A form element that's an extension of a radio group with additional metadata to facilitate comparisons or progressive disclosure. As with a radio group, tiles allow the user to choose one of a predefined set of options.
 
 
 

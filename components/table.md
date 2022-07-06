@@ -19,6 +19,10 @@ Presents data in a two-dimensional table format, arranged in columns and rows in
 > items also receives the corresponding  `Item` object. You can use the group label to
 > add a meaningful description to the whole selection.
 > 
+> In addition, you can use `tableLabel` to provide a label for the table. If you use a
+> header for this table, you may reuse the string to provide a caption-like description.
+> For example, tableLabel=Instances will be announced as 'Instances table'.
+> 
 > Example:
 > ```
 > {
@@ -27,7 +31,8 @@ Presents data in a two-dimensional table format, arranged in columns and rows in
 >     `${selectedItems.length} ${selectedItems.length === 1 ? 'item' : 'items'} selected`,
 >   itemSelectionLabel: ({ selectedItems }, item) => {
 >     isItemSelected = selectedItems.filter(i => i.id === item.id).length;
->     return `${item.name} is ${isItemSelected ? '' : 'not'} selected`
+>     return `${item.name} is ${isItemSelected ? '' : 'not'} selected`,
+>   tableLabel: "Items"
 >  }
 > }
 > ```
@@ -39,11 +44,12 @@ TableProps.AriaLabels {
   allItemsSelectionLabel?: (
     data: TableProps.SelectionState<T>
   ) => string
-  itemSelectionLabel: (
+  itemSelectionLabel?: (
     data: TableProps.SelectionState<T>,
     row: T
   ) => string
-  selectionGroupLabel: string
+  selectionGroupLabel?: string
+  tableLabel?: string
 }
 ```
 
@@ -82,10 +88,10 @@ Required: No
 >   whether the sorting is disabled, as three Boolean values: `sorted`, `descending` and `disabled`.
 >   We recommend that you use this for sortable columns to provide more meaningful labels based on the
 >   current sorting direction.
-> * `sortingField` (string) - Enables default column sorting. The value is used in [collection hooks](https://www.npmjs.com/package/@awsui/collection-hooks)
+> * `sortingField` (string) - Enables default column sorting. The value is used in [collection hooks](/get-started/dev-guides/collection-hooks/)
 >   to reorder the items. Provide the name of the property within each item that should be used for sorting by this column.
 >   For more complex sorting use `sortingComparator` instead.
-> * `sortingComparator` ((T, T) => number) - Enables custom column sorting. The value is used in [collection hooks](https://www.npmjs.com/package/@awsui/collection-hooks)
+> * `sortingComparator` ((T, T) => number) - Enables custom column sorting. The value is used in [collection hooks](/get-started/dev-guides/collection-hooks/)
 >   to reorder the items. This property accepts a custom comparator that is used to compare two items.
 >   The comparator must implement ascending ordering, and the output is inverted automatically in case of descending order.
 >   If present, the `sortingField` property is ignored.
@@ -275,6 +281,8 @@ Required: No
 > * `full-page` – Use this variant when table is the primary element on the page.
 
 Type: String
+
+Default: `'container'`
 
 Valid values: `container | embedded | stacked | full-page`
 

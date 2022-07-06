@@ -1,6 +1,6 @@
 # Input
 
-A control that enables the user to input a single line of text.
+With the input control, users can input a single line of text.
 
 
 
@@ -176,8 +176,8 @@ Required: No
 ### invalid
 
 > Overrides the invalidation state. Usually the invalid state
-> comes from the parent `FormField` / `awsui-form-field`
-> component, however sometimes you need to override its
+> comes from the parent `FormField`component,
+> however sometimes you need to override its
 > state when you have more than one input within a
 > single form field.
 

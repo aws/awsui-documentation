@@ -1,6 +1,6 @@
 # Attribute editor (AttributeEditor)
 
-Enables the user to create, edit, and delete resource attributes.
+With the attribute editor, users can create, edit, and delete resource attributes.
 
 
 
@@ -80,7 +80,7 @@ Required: No
 
 ### items
 
-> Sepcifies the items that serve as the data source for all rows.
+> Specifies the items that serve as the data source for all rows.
 > The display of a row is handled by the `definition` property.
 
 Type: ReadonlyArray<T>

@@ -1,6 +1,6 @@
 # Date range picker (DateRangePicker)
 
- Enables users to specify a date and time range. 
+With the date range picker, users can specify a date and time range. 
 
 
 
@@ -144,6 +144,10 @@ DateRangePickerProps.I18nStrings {
   previousMonthAriaLabel: string
   relativeModeTitle: string
   relativeRangeSelectionHeading: string
+  renderSelectedAbsoluteRangeAriaLive?: (
+    startDate: string,
+    endDate: string
+  ) => string
   startDateLabel: string
   startTimeLabel: string
   todayAriaLabel: string
@@ -166,8 +170,8 @@ Required: No
 ### invalid
 
 > Overrides the invalidation state. Usually the invalid state
-> comes from the parent `FormField` / `awsui-form-field`
-> component, however sometimes you need to override its
+> comes from the parent `FormField`component,
+> however sometimes you need to override its
 > state when you have more than one input within a
 > single form field.
 

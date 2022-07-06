@@ -1,6 +1,6 @@
 # Area chart (AreaChart)
 
-An area chart visualizes two or more series of data. Through stacked data series, it emphasizes the part-to-whole relationship of data over a period of time.
+Visualizes two or more series of data. Through stacked data series, it emphasizes the part-to-whole relationship of data over a period of time.
 
 
 

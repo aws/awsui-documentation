@@ -1,6 +1,7 @@
 # Expandable section (ExpandableSection)
 
-Enables a user to expand or collapse a section. Use expandable sections when you have multiple sections on a page, and you want to enable users to see one or more sections at a time. Expandable sections are collapsed by default.
+With expandable selection, users can expand or collapse a section. Use expandable 
+sections when you have multiple sections on a page, and you want to allow users to see one or more sections at a time. Expandable sections are collapsed by default. 
 
 
 

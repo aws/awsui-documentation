@@ -1,6 +1,6 @@
 # Tag editor (TagEditor)
 
-An extension of the attribute editor built with integrated logic. It enables users to create, edit, or delete resource tags.
+An extension of the attribute editor built with integrated logic. With the tag editor, users can create, edit, or delete resource tags.
 
 
 

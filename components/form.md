@@ -1,6 +1,6 @@
 # Form
 
-A section of a page that has interactive controls that enable a user to submit information to a web server.
+A section of a page that has interactive controls with which a user can submit information to a web server.
 
 
 

@@ -1,6 +1,6 @@
 # Box
 
-Enables you to display and style basic elements and containers in compliance with the design system's typography and spacing strategy.
+With the box component, you can display and style basic elements and containers in compliance with [systemname]'s typography and spacing strategy.
 
 
 

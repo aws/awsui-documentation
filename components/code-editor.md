@@ -1,6 +1,6 @@
 # Code editor (CodeEditor)
 
-Enables users to write and edit code.
+With the code editor, users can write and edit code.
 
 
 
@@ -66,6 +66,15 @@ Required: No
 > 
 
 Type: String
+
+Required: No
+
+
+### editorContentHeight
+
+> Specifies the height of the code editor document.
+
+Type: Number
 
 Required: No
 
@@ -206,6 +215,22 @@ Detail type:
 ```
 CodeEditorProps.ChangeDetail {
   value: string
+}
+```
+
+Cancelable: No
+
+
+
+### onEditorContentResize
+
+> Called when the user resizes the editor by dragging the resize icon.
+> The event `detail` contains the new height of the editor in pixels.
+
+Detail type: 
+```
+CodeEditorProps.ResizeDetail {
+  height: number
 }
 ```
 
