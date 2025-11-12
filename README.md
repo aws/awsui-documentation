@@ -1,7 +1,9 @@
 # AWS-UI is now Cloudscape Design System
  
 On July 19th, 2022, we launched [Cloudscape Design System](https://cloudscape.design). Cloudscape is an evolution of AWS-UI. It offers user interface guidelines, front-end components, design resources, and development tools for building intuitive, engaging, and inclusive user experiences at scale. As part of the release, we have begun to publish npm packages to the new `@cloudscape-design` namespace.
- 
+
+## Deprecated: After December 18th, 2025, this package will no longer receive updates
+
 **We recommend migrating your existing AWS-UI applications to *[Cloudscape](https://cloudscape.design)*.**
  
 ## Difference between AWS-UI and Cloudscape
